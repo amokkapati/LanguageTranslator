@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Language Translator</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;700&display=swap">
+    <style>
+        body {
+            background-color: #15EBDC;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, "Noto Sans Telugu", "Noto Sans Hindi", "Noto Sans SC", sans-serif;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        form {
+            background-color: #15EBDC;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80%;
+            max-width: 500px;
+            padding: 20px;
+            border: 10px solid #000000;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        label, select, textarea, input {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>AI Language Translator</h1>
+    <form method="POST">
+        <label for="source_language">Source Language:</label>
+        <select id="source_language" name="source_language">
+            <option value="en">English</option>
+            <option value="es">Spanish</option>
+            <option value="fr">French</option>
+            <option value="zh">Mandarin</option>
+            <option value="hi">Hindi</option>
+            <option value="te">Telugu</option>
+
+            <!-- Add more language options here -->
+        </select><br><br>
+
+        <label for="target_language">Target Language:</label>
+        <select id="target_language" name="target_language">
+            <option value="en">English</option>
+            <option value="es">Spanish</option>
+            <option value="fr">French</option>
+            <option value="zh">Mandarin</option>
+            <option value="hi">Hindi</option>
+            <option value="te">Telugu</option>
+            <!-- Add more language options here -->
+        </select><br><br>
+
+        <label for="text_to_translate">Text to Translate:</label>
+        <textarea id="text_to_translate" name="text_to_translate" rows="4" cols="50"></textarea><br><br>
+
+        <input type="submit" value="Translate">
+    </form>
+
+    {% if translated_text %}
+    <h2>Translated Text:</h2>
+    <p>{{ translated_text }}</p>
+    {% endif %}
+
+    <script>
+        window.onload = function() {
+            document.getElementById('text_to_translate').value = '';
+        };
+    </script>
+    <p><em>Please note that OpenAI's machine translations may not be entirely accurate, you may refresh the page for more accurate results.n</em></p>
+</body>
+</html>
