@@ -3,7 +3,6 @@ import openai
 
 app = Flask(__name__)
 
-# Replace with your OpenAI API key
 API_KEY = ''
 openai.api_key = API_KEY
 
