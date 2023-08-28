@@ -1,3 +1,4 @@
 # AI Language Translator created by Aditya Mokkapati
-# Utilizes OpenAI's public API to create a website using Python's FLASK framework
-# Part of the used code is displayed here
+# Utilizes OpenAI's public ChatGPT API to create a natural text processing translator
+# utilized Python's FLASK framework along with HTML and CSS styling to display the program onto a website
+# Samples of the code is given here
