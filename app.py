@@ -4,7 +4,7 @@ import openai
 app = Flask(__name__)
 
 # Replace with your OpenAI API key
-API_KEY = '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'
+API_KEY = ''
 openai.api_key = API_KEY
 
 def translate_text(text, source_language, target_language):
